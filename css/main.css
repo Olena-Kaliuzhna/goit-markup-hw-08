@@ -434,18 +434,26 @@ img {
   .nav-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     z-index: 5;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     width: 100%;
     padding: 60px;
     text-align: center;
     background: #FFFFFF;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav-menu.is-open {
     display: block;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
   }
 }
 
@@ -746,6 +754,7 @@ img {
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  padding: 50px 30px;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -759,10 +768,8 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 93px;
-  left: 15px;
-  right: 15px;
+  position: relative;
+  width: 100%;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -784,18 +791,24 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -40%) scale(1.2);
-          transform: translate(-50%, -40%) scale(1.2);
+  -webkit-transform: translate(-50%, -35%) scale(1.2);
+          transform: translate(-50%, -35%) scale(1.2);
 }
 
 @media screen and (min-width: 480px) {
   .modal {
     position: absolute;
-    min-width: 450px;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -35%) scale(1);
             transform: translate(-50%, -35%) scale(1);
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 538px;
   }
 }
 
@@ -1693,7 +1706,7 @@ img {
 }
 
 .projects-label {
-  padding: 20px 24px;
+  padding: 24px 10px 24px 20px;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
