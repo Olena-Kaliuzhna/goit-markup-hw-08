@@ -760,58 +760,60 @@
     <!-- form-modal -->
 
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">       
+      <div class="modal-wrapper">
+        <div class="modal">       
         
-        <form class="form-modal">   
-          <button class="button-close-form" data-modal-close>
-            <svg class="icon-close" width="18" height="18">
-              <use href="./images/sprite-icon.svg#icon-close-black"></use>
-            </svg>
-          </button>       
-
-          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-
-          <div class="form-field">            
-            <input class="form-input" type="text" name="name" id="name" placeholder=" ">   
-            <label for="name" class="forms-label">Имя</label>  
-            <svg class="form-icon" width="18" height="18">
-              <use href="./images/sprite-icon.svg#icon-person" ></use>
-            </svg>        
-          </div>
-          <div class="form-field">            
-            <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">    
-            <label for="tel" class="forms-label">Телефон</label> 
-            <svg class="form-icon" width="18" height="18">
-              <use href="./images/sprite-icon.svg#icon-phone" ></use>
-            </svg>       
-          </div>
-          <div class="form-field">            
-            <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">    
-            <label for="mail" class="forms-label">Почта</label>    
-            <svg class="form-icon" width="18" height="18">
-              <use href="./images/sprite-icon.svg#icon-mail-black" ></use>
-            </svg>    
-          </div>
-
-          <div class="form-coment">
-            <textarea class="coment" name="coment" id="coment"  rows="10" placeholder=" "></textarea>
-            <label for="coment" class="forms-label">Комментарий</label>
-          </div>         
+          <form class="form-modal">   
+            <button class="button-close-form" data-modal-close>
+              <svg class="icon-close" width="18" height="18">
+                <use href="./images/sprite-icon.svg#icon-close-black"></use>
+              </svg>
+            </button>       
+  
+            <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+  
+            <div class="form-field">            
+              <input class="form-input" type="text" name="name" id="name" placeholder=" ">   
+              <label for="name" class="forms-label">Имя</label>  
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/sprite-icon.svg#icon-person" ></use>
+              </svg>        
+            </div>
+            <div class="form-field">            
+              <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">    
+              <label for="tel" class="forms-label">Телефон</label> 
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/sprite-icon.svg#icon-phone" ></use>
+              </svg>       
+            </div>
+            <div class="form-field">            
+              <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">    
+              <label for="mail" class="forms-label">Почта</label>    
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/sprite-icon.svg#icon-mail-black" ></use>
+              </svg>    
+            </div>
+  
+            <div class="form-coment">
+              <textarea class="coment" name="coment" id="coment"  rows="10" placeholder=" "></textarea>
+              <label for="coment" class="forms-label">Комментарий</label>
+            </div>         
+              
+            <div class="form-agreement">
+              <input class="checkbox visually-hidden" type="checkbox" name="agreement" value="agree" id="checkbox-agree" />
+              <label for="checkbox-agree" class="agreements-label">
+                Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>    
+              </label> 
+            </div>
+              
             
-          <div class="form-agreement">
-            <input class="checkbox visually-hidden" type="checkbox" name="agreement" value="agree" id="checkbox-agree" />
-            <label for="checkbox-agree" class="agreements-label">
-              Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>    
-            </label> 
-          </div>
-            
+  
+            <button class="button" type="submit">Отправить</button>          
+  
+          </form>
           
-
-          <button class="button" type="submit">Отправить</button>          
-
-        </form>
-        
-
+  
+        </div>
       </div>
 
     </div>
